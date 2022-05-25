@@ -1,0 +1,33 @@
+{
+	"image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-12",
+
+	"features": {
+		"common": {
+			"username": "automatic",
+			"uid": "automatic",
+			"gid": "automatic",
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"upgradePackages": true,
+			"nonFreePackages": false
+		},
+		"node": {
+			"version": "lts",
+			"nodeGypDependencies": true
+		}
+	},
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"ms-vscode.vscode-typescript-tslint-plugin"
+			]
+		}
+	},
+	
+	"postCreateCommand": "npm install && npm install -g ts-node typescript",
+
+	"forwardPorts": [3000]
+}
