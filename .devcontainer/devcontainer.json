@@ -27,7 +27,8 @@
 		}
 	},
 	
-	"postCreateCommand": "npm install && npm install -g ts-node typescript",
+	"postCreateCommand": "npm install && npm install -g ts-node typescript && mkdir /workspaces/codespaces-test/src/commands",
+	// the empty commands folder is needed for wokcommands to function properly. (even if there is nothing in it)
 
 	"forwardPorts": [3000]
 }
